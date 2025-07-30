@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 import requests
+import uvicorn
 
 app = FastAPI()
 
@@ -28,6 +29,9 @@ dimension = document_embeddings.shape[1]
 index = faiss.IndexFlatL2(dimension)
 index.add(np.array(document_embeddings))
 
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=10000)
+    
 # Chat schema
 class ChatRequest(BaseModel):
     message: str
