@@ -41,6 +41,9 @@ async def chat(request: ChatRequest):
     context = documents[I[0][0]]
 
     prompt = f"Context: {context}\nQuestion: {query}\nAnswer:"
+    response_text = f"(Simulated reply based on context)\n{prompt}"
+    return {"reply": response_text}    
+    """
     response = requests.post("http://localhost:11434/api/generate", json={
         "model": "mistral",
         "prompt": prompt,
@@ -48,6 +51,7 @@ async def chat(request: ChatRequest):
     })
     result = response.json()
     return {"reply": result.get("response", "").strip()}
+    """
     
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=10000)
