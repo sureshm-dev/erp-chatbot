@@ -1,0 +1,6 @@
+Our ERP product includes the following modules:
+- Inventory Management: Track stock, suppliers, and warehouse movements.
+- Sales and Distribution: Manage quotations, orders, and billing.
+- Finance and Accounting: Monitor budgets, expenses, and financial reporting.
+- Human Resources: Handle recruitment, payroll, and employee records.
+It is cloud-native, supports multi-tenancy, and offers customizable workflows.
