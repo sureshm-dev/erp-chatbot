@@ -16,7 +16,7 @@
   <script>
     async function send() {
       const input = document.getElementById('userinput').value;
-      const res = await fetch('http://localhost:8000/chat', {
+      const res = await fetch('https://erp-raghav.onrender.com:8000/chat', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({message: input})
